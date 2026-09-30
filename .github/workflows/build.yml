@@ -17,9 +17,7 @@ jobs:
         run: |
           unzip -q ClearDay-Android.zip -d .clearday
           rsync -a .clearday/ ./
-          sed -i 's/Color.argb(170,green)/Color.argb(170,
-          Color.red(green), Color.green(green), Color.blue(green))/g' app/
-          src/main/java/pl/clearday/app/MainActivity.java
+          sed -i 's/Color.argb(170,green)/Color.argb(170, Color.red(green), Color.green(green), Color.blue(green))/g' app/src/main/java/pl/clearday/app/MainActivity.java
       - name: Ustaw Javę
         uses: actions/setup-java@v4
         with:
